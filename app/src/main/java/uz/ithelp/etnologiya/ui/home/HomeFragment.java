@@ -50,11 +50,11 @@ public class HomeFragment extends Fragment {
 
     private void initiali() {
 
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a10,"Muqaddima","XXI asr o‘zbеk xalqi o‘z tarixi va milliy an’analar ...","file:///android_asset/Kirish.htm"));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a1,"I BОB. ETNOLOGIYANING IJTIMOIY FANLAR  TIZIMIDA TUTGAN O‘RNI. UNING ASOSIY TUSHUNCHALARI VA O‘ZIGA XOSLIGI","Harqan day fanning fan sifatida shakllanishi ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a2,"II BОB. ETNOLOGIYANING ASOSIY  YO‘NALISHLARI VA MAKTABLARI","Harqan day fanning fan sifatida shakllanishi ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a3,"III BOB. ETNOS MUAMMOSI BILAN BOG‘LIQ QARASHLAR VA NAZARIYALAR","Harqan day fanning fan sifatida shakllanishi ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a4,"IV BOB. DUNYONING ETNIK MANZARASI VA ETNOSLAR KLASSIFIKATSIYASI","Harqan day fanning fan sifatida shakllanishi ...",""));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a10,"Muqaddima","BIRINCHI QISM. ETNOLOGIYANING UMUMIY MUAMMOLARI ...","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/muqqadima.pdf"));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a1,"I BОB. ETNOLOGIYANING IJTIMOIY FANLAR  TIZIMIDA TUTGAN O‘RNI. UNING ASOSIY TUSHUNCHALARI VA O‘ZIGA XOSLIGI","Etnologiyaning fan sifatida shakllanish tarixi ...",""));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a2,"II BОB. ETNOLOGIYANING ASOSIY  YO‘NALISHLARI VA MAKTABLARI","Evolyutsionizm va diffuzionizm ...",""));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a3,"III BOB. ETNOS MUAMMOSI BILAN BOG‘LIQ QARASHLAR VA NAZARIYALAR","Etnos va etniklik ...",""));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a4,"IV BOB. DUNYONING ETNIK MANZARASI VA ETNOSLAR KLASSIFIKATSIYASI","Yer yuzi aholisi etnik tarixi ...",""));
 
 
 

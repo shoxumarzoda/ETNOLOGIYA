@@ -1,4 +1,4 @@
-package uz.ithelp.etnologiya.ui.home;
+package uz.ithelp.etnologiya.ui.gallery;
 
 import android.content.Context;
 import android.content.Intent;
@@ -65,10 +65,11 @@ public class ModelViewPagerAdapter extends PagerAdapter {
             @Override
             public void onClick(View view) {
 
-                if (modelViewPagerList.get(position).getBouncher().toLowerCase().startsWith("muqaddima")
+                if (modelViewPagerList.get(position).getBouncher().toLowerCase().startsWith("etnologiyaga") ||
+                    modelViewPagerList.get(position).getBouncher().toLowerCase().startsWith("dunyo")
+
                 ){
 
-//
                         Intent intent = new Intent(context, MainActivity3.class);
                         intent.putExtra("data", modelViewPagerList.get(position).getUrl());
                         context.startActivity(intent);
@@ -77,7 +78,7 @@ public class ModelViewPagerAdapter extends PagerAdapter {
                 else {
 //
                     Intent intent = new Intent(context, MainActivity2.class);
-                    intent.putExtra("swimmers", position);
+                    intent.putExtra("swimmers", position+5);
 
                     context.startActivity(intent);
                 }
