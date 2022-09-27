@@ -55,7 +55,7 @@ public class GalleryFragment extends Fragment {
         modelViewPagerList.add(new ModelViewPager(R.drawable.a9,"VI BОB. AVSTRALIYA VA OKEANIYA XALQLARI","IKKINCHI QISM. JAHON XALQLARINING ETNOLOGIK TAVSIFI ...","file:///android_asset/Kirish.htm"));
         modelViewPagerList.add(new ModelViewPager(R.drawable.a11,"VII BОB. OSIYO XALQLARI  ETNOLOGIYASI","Osiyo xalqlarining tarixiy-etnologik tavsifi  ...",""));
         modelViewPagerList.add(new ModelViewPager(R.drawable.a7,"VIII BОB. AFRIKA XALQLARI","Afrikaning tarixiy-etnologik tavsif ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a8,"IX BОB. AMERIKA XALQLARI ETNOLOGIYASI\n","Amerika xalqlarining tarixiy-etnologik tavsif ...",""));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a8,"IX BОB. AMERIKA XALQLARI ETNOLOGIYASI","Amerika xalqlarining tarixiy-etnologik tavsif ...",""));
         modelViewPagerList.add(new ModelViewPager(R.drawable.a5,"X BОB. YEVROPA XALQLARI","YEVROPA xalqlarining tarixiy-etnologik tavsif ...",""));
         modelViewPagerList.add(new ModelViewPager(R.drawable.a10,"ETNOLOGIYAGA OID ATAMA VA TUSHUNCHALARNING IZOHLI LUG‘ATI","Avtoxton (yunon. ) – mahalliy, jaydari, tub  ...",""));
         modelViewPagerList.add(new ModelViewPager(R.drawable.a6,"DUNYO MAMLAKATLARI VA ULARNING NUFUZI","AVSTRALIYA VA OKEANIYA ...",""));
