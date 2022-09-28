@@ -1,4 +1,4 @@
-package uz.ithelp.etnologiya;
+package uz.ithelp.etnologiya.ui;
 
 import java.io.Serializable;
 

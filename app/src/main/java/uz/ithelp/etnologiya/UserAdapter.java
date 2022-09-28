@@ -1,4 +1,4 @@
-package uz.ithelp.etnologiya;
+package uz.ithelp.etnologiya.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,14 +16,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import uz.ithelp.etnologiya.MainActivity2;
+import uz.ithelp.etnologiya.R;
+
 class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder> implements Filterable {
 
-    private List<uz.ithelp.etnologiya.ModelRcycler> userModelList;
-    private List<uz.ithelp.etnologiya.ModelRcycler> userModelListFilter;
+    private List<ModelRcycler> userModelList;
+    private List<ModelRcycler> userModelListFilter;
     private Context context;
     private SelectedUser selectedUser;
 
-    public UserAdapter(List<uz.ithelp.etnologiya.ModelRcycler> userModelList, MainActivity2 selectedUser) {
+    public UserAdapter(List<ModelRcycler> userModelList, MainActivity2 selectedUser) {
         this.userModelList = userModelList;
         this.userModelListFilter = userModelList;
         this.selectedUser = selectedUser;
@@ -38,7 +41,7 @@ class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull UserAdapterViewHolder holder, int position) {
-        uz.ithelp.etnologiya.ModelRcycler modelRcycler = userModelList.get(position);
+        ModelRcycler modelRcycler = userModelList.get(position);
         String userName = modelRcycler.getLessonName();
         holder.tvUserNAme.setText(userName);
 
@@ -62,8 +65,8 @@ class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder
                 }
                 else {
                     String searchCHr = constraint.toString().toLowerCase();
-                    List<uz.ithelp.etnologiya.ModelRcycler> resultData = new ArrayList<>();
-                    for(uz.ithelp.etnologiya.ModelRcycler userModel: userModelListFilter){
+                    List<ModelRcycler> resultData = new ArrayList<>();
+                    for(ModelRcycler userModel: userModelListFilter){
                         if (userModel.getLessonName().toLowerCase().contains(searchCHr)){
                             resultData.add(userModel);
                         }
@@ -77,7 +80,7 @@ class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder
 
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
-                userModelList  = (List<uz.ithelp.etnologiya.ModelRcycler>) results.values;
+                userModelList  = (List<ModelRcycler>) results.values;
                 notifyDataSetChanged();
             }
         };
@@ -85,7 +88,7 @@ class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder
     }
 
     public interface SelectedUser{
-        void selectedUser(uz.ithelp.etnologiya.ModelRcycler modelRcycler);
+        void selectedUser(ModelRcycler modelRcycler);
     }
 
     public class UserAdapterViewHolder extends RecyclerView.ViewHolder {
