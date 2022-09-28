@@ -4,20 +4,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import uz.ithelp.etnologiya.ModelViewPager;
+import uz.ithelp.etnologiya.ModelViewPagerAdapter;
 import uz.ithelp.etnologiya.R;
 import uz.ithelp.etnologiya.databinding.FragmentGalleryBinding;
-import uz.ithelp.etnologiya.ui.home.ModelViewPager;
-import uz.ithelp.etnologiya.ui.home.ModelViewPagerAdapter;
 
 public class GalleryFragment extends Fragment {
 
@@ -25,7 +23,7 @@ public class GalleryFragment extends Fragment {
     ViewPager viewPager;
     ModelViewPagerAdapter modelViewPagerAdapter;
 
-    List<ModelViewPager> modelViewPagerList;
+    List<ModelViewPager> modelViewPagerList2;
 
     private FragmentGalleryBinding binding;
 
@@ -37,10 +35,10 @@ public class GalleryFragment extends Fragment {
         View root = binding.getRoot();
 
 
-        modelViewPagerList = new ArrayList<>();
+        modelViewPagerList2 = new ArrayList<>();
         initiali();
 
-        modelViewPagerAdapter = new ModelViewPagerAdapter(modelViewPagerList,getContext());
+        modelViewPagerAdapter = new ModelViewPagerAdapter(modelViewPagerList2,getContext());
 
         viewPager = binding.viewPager2;
         viewPager.setAdapter(modelViewPagerAdapter);
@@ -52,13 +50,13 @@ public class GalleryFragment extends Fragment {
 
     private void initiali() {
 
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a9,"VI BОB. AVSTRALIYA VA OKEANIYA XALQLARI","IKKINCHI QISM. JAHON XALQLARINING ETNOLOGIK TAVSIFI ...","file:///android_asset/Kirish.htm"));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a11,"VII BОB. OSIYO XALQLARI  ETNOLOGIYASI","Osiyo xalqlarining tarixiy-etnologik tavsifi  ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a7,"VIII BОB. AFRIKA XALQLARI","Afrikaning tarixiy-etnologik tavsif ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a8,"IX BОB. AMERIKA XALQLARI ETNOLOGIYASI","Amerika xalqlarining tarixiy-etnologik tavsif ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a5,"X BОB. YEVROPA XALQLARI","YEVROPA xalqlarining tarixiy-etnologik tavsif ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a10,"ETNOLOGIYAGA OID ATAMA VA TUSHUNCHALARNING IZOHLI LUG‘ATI","Avtoxton (yunon. ) – mahalliy, jaydari, tub  ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a6,"DUNYO MAMLAKATLARI VA ULARNING NUFUZI","AVSTRALIYA VA OKEANIYA ...",""));
+        modelViewPagerList2.add(new ModelViewPager(R.drawable.a9,"VI BОB. AVSTRALIYA VA OKEANIYA XALQLARI","IKKINCHI QISM. JAHON XALQLARINING ETNOLOGIK TAVSIFI ...","6"));
+        modelViewPagerList2.add(new ModelViewPager(R.drawable.a11,"VII BОB. OSIYO XALQLARI  ETNOLOGIYASI","Osiyo xalqlarining tarixiy-etnologik tavsifi  ...","7"));
+        modelViewPagerList2.add(new ModelViewPager(R.drawable.a7,"VIII BОB. AFRIKA XALQLARI","Afrikaning tarixiy-etnologik tavsif ...","8"));
+        modelViewPagerList2.add(new ModelViewPager(R.drawable.a8,"IX BОB. AMERIKA XALQLARI ETNOLOGIYASI","Amerika xalqlarining tarixiy-etnologik tavsif ...","9"));
+        modelViewPagerList2.add(new ModelViewPager(R.drawable.a5,"X BОB. YEVROPA XALQLARI","YEVROPA xalqlarining tarixiy-etnologik tavsif ...","10"));
+        modelViewPagerList2.add(new ModelViewPager(R.drawable.a10,"ETNOLOGIYAGA OID ATAMA VA TUSHUNCHALARNING IZOHLI LUG‘ATI","Avtoxton (yunon. ) – mahalliy, jaydari, tub  ...","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/izoh.pdf"));
+        modelViewPagerList2.add(new ModelViewPager(R.drawable.a6,"DUNYO MAMLAKATLARI VA ULARNING NUFUZI","AVSTRALIYA VA OKEANIYA ...","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/dunyo.pdf"));
 
 
 

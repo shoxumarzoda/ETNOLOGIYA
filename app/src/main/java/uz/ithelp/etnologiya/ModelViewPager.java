@@ -1,4 +1,4 @@
-package uz.ithelp.etnologiya.ui.gallery;
+package uz.ithelp.etnologiya;
 
 public class ModelViewPager {
 

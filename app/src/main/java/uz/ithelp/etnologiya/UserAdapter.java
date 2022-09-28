@@ -1,4 +1,4 @@
-package uz.ithelp.etnologiya.ui;
+package uz.ithelp.etnologiya;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,9 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import uz.ithelp.etnologiya.MainActivity2;
-import uz.ithelp.etnologiya.R;
 
 class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder> implements Filterable {
 

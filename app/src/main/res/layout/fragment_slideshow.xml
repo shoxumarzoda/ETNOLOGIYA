@@ -1,22 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.slideshow.SlideshowFragment">
 
-    <TextView
-        android:id="@+id/text_slideshow"
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center_vertical"
+tools:context=".ui.slideshow.SlideshowFragment">
+
+
+
+<androidx.cardview.widget.CardView
+    app:cardElevation="10dp"
+    app:cardCornerRadius="30dp"
+    android:layout_margin="30dp"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <LinearLayout
+
+        android:weightSum="2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:scaleType="centerInside"
+
+                android:src="@drawable/admin" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Ortiqov Yosin Abdulboqiyevich"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:text="Toshkent viloyati Chirchiq davlat pedagogika instituti Tarix kafedrasi o‘qituvchisi, tarix fanlari bo‘yicha falsafa doktori (PhD)"
+                android:textSize="10sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="5"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    app:cardElevation="10dp"
+    app:cardCornerRadius="30dp"
+    android:layout_margin="30dp"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:scaleType="centerInside"
+
+                android:src="@drawable/admin2" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Kamoliddinov Farrux Burxoniddin o‘g‘li"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:text="Toshkent viloyati Chirchiq davlat pedagogika instituti Tarix kafedrasi o‘qituvchisi"
+                android:textSize="10sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="5"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

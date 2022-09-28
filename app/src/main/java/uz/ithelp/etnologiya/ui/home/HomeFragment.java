@@ -14,6 +14,8 @@ import androidx.viewpager.widget.ViewPager;
 import java.util.ArrayList;
 import java.util.List;
 
+import uz.ithelp.etnologiya.ModelViewPager;
+import uz.ithelp.etnologiya.ModelViewPagerAdapter;
 import uz.ithelp.etnologiya.R;
 import uz.ithelp.etnologiya.databinding.FragmentHomeBinding;
 
@@ -51,10 +53,10 @@ public class HomeFragment extends Fragment {
     private void initiali() {
 
         modelViewPagerList.add(new ModelViewPager(R.drawable.a10,"Muqaddima","BIRINCHI QISM. ETNOLOGIYANING UMUMIY MUAMMOLARI ...","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/muqqadima.pdf"));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a1,"I BОB. ETNOLOGIYANING IJTIMOIY FANLAR  TIZIMIDA TUTGAN O‘RNI. UNING ASOSIY TUSHUNCHALARI VA O‘ZIGA XOSLIGI","Etnologiyaning fan sifatida shakllanish tarixi ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a2,"II BОB. ETNOLOGIYANING ASOSIY  YO‘NALISHLARI VA MAKTABLARI","Evolyutsionizm va diffuzionizm ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a3,"III BOB. ETNOS MUAMMOSI BILAN BOG‘LIQ QARASHLAR VA NAZARIYALAR","Etnos va etniklik ...",""));
-        modelViewPagerList.add(new ModelViewPager(R.drawable.a4,"IV BOB. DUNYONING ETNIK MANZARASI VA ETNOSLAR KLASSIFIKATSIYASI","Yer yuzi aholisi etnik tarixi ...",""));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a1,"I BОB. ETNOLOGIYANING IJTIMOIY FANLAR  TIZIMIDA TUTGAN O‘RNI. UNING ASOSIY TUSHUNCHALARI VA O‘ZIGA XOSLIGI","Etnologiyaning fan sifatida shakllanish tarixi ...","1"));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a2,"II BОB. ETNOLOGIYANING ASOSIY  YO‘NALISHLARI VA MAKTABLARI","Evolyutsionizm va diffuzionizm ...","2"));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a3,"III BOB. ETNOS MUAMMOSI BILAN BOG‘LIQ QARASHLAR VA NAZARIYALAR","Etnos va etniklik ...","3"));
+        modelViewPagerList.add(new ModelViewPager(R.drawable.a4,"IV BOB. DUNYONING ETNIK MANZARASI VA ETNOSLAR KLASSIFIKATSIYASI","Yer yuzi aholisi etnik tarixi ...","4"));
 
 
 

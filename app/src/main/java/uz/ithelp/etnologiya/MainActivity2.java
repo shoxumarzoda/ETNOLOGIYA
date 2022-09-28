@@ -1,5 +1,12 @@
 package uz.ithelp.etnologiya;
 
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,13 +16,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
     List<ModelRcycler> modelRcyclers = new ArrayList<>();
     TextView textViewSelectedChapterName;
 
-    int getChemgeItemPosition;
+    String getChemgeItemPosition;
 
     ConstraintLayout constraintLayout;
     UserAdapter userAdapter;
@@ -48,15 +48,15 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
 
         // tool bar sozlanmasi
-        toolbar = findViewById(R.id.toolBAr);
-        this.setSupportActionBar(toolbar);
-        this.getSupportActionBar().setTitle("");
+//        toolbar = findViewById(R.id.toolBAr);
+//        this.setSupportActionBar(toolbar);
+//        this.getSupportActionBar().setTitle("");
 
         // tanlangan chapter nomini activity2 da sarlavhaga yozish
         textViewSelectedChapterName = findViewById(R.id.textViewSelectedChapterName);
 
 
-        getChemgeItemPosition = intent.getIntExtra("swimmers",1);
+        getChemgeItemPosition = intent.getStringExtra("swimmers");
 
 
         //backround uchun liner layoutni aniqlash
@@ -64,7 +64,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
         constraintLayout.setBackgroundColor(getResources().getColor(R.color.mycolor));
 
         switch (getChemgeItemPosition){
-            case 1: {
+            case "1": {
 
                 textViewSelectedChapterName.setText("I BОB. ETNOLOGIYANING IJTIMOIY FANLAR  TIZIMIDA TUTGAN O‘RNI. UNING ASOSIY TUSHUNCHALARI VA O‘ZIGA XOSLIGI");
 
@@ -76,7 +76,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
             }break;
 
-            case 2: {
+            case "2": {
 
                 textViewSelectedChapterName.setText("II BОB. ETNOLOGIYANING ASOSIY  YO‘NALISHLARI VA MAKTABLARI");
 
@@ -88,7 +88,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
             }break;
 
-            case 3: {
+            case "3": {
 
                 textViewSelectedChapterName.setText("III BOB. ETNOS MUAMMOSI BILAN BOG‘LIQ QARASHLAR VA NAZARIYALAR");
 
@@ -98,7 +98,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
             }break;
 
-            case 4: {
+            case "4": {
 
                 textViewSelectedChapterName.setText("IV BOB. DUNYONING ETNIK MANZARASI VA ETNOSLAR KLASSIFIKATSIYASI");
 
@@ -110,7 +110,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
             }break;
 
-            case 5:{
+            case "5":{
                 textViewSelectedChapterName.setText("V BOB. ETNOS VA MADANIYAT");
 
                 modelRcyclers.add(new ModelRcycler("17-§. Madaniyat va uning etnik funksiyasi","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/4.17.pdf"));
@@ -120,7 +120,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
                 modelRcyclers.add(new ModelRcycler("21-§. O‘zbek milliy mentaliteti","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/4.21.pdf"));
             }
 
-            case 6:{
+            case "6":{
                 textViewSelectedChapterName.setText("VI BОB. AVSTRALIYA VA OKEANIYA XALQLARI");
 
                 modelRcyclers.add(new ModelRcycler("22-§. Avstraliya va tasmaniya xalqlari","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/4.22.pdf"));
@@ -130,7 +130,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
             }break;
 
-            case 7:{
+            case "7":{
                 textViewSelectedChapterName.setText("VII BОB. OSIYO XALQLARI  ETNOLOGIYASI");
 
                 modelRcyclers.add(new ModelRcycler("26-§. Osiyo xalqlarining tarixiy-etnologik tavsif","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/4.26.pdf"));
@@ -142,7 +142,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
             }break;
 
-            case 8:{
+            case "8":{
                 textViewSelectedChapterName.setText("VIII BОB. AFRIKA XALQLARI");
 
                 modelRcyclers.add(new ModelRcycler("32-§. Afrikaning tarixiy-etnologik tavsif","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/8.32.pdf"));
@@ -153,7 +153,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
             }break;
 
-            case 9:{
+            case "9":{
                 textViewSelectedChapterName.setText("IX BОB. AMERIKA XALQLARI ETNOLOGIYASI");
 
                 modelRcyclers.add(new ModelRcycler("37-§. Amerika xalqlarining tarixiy-etnologik tavsif","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/9.37.pdf"));
@@ -164,7 +164,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
 
             }break;
 
-            case 10:{
+            case "10":{
                 textViewSelectedChapterName.setText("X BОB. YEVROPA XALQLARI");
 
                 modelRcyclers.add(new ModelRcycler("42-§. Yevropa aholisining tarixiy-etnologik tavsif","https://github.com/shoxumarzoda/ETNOLOGIYA/raw/master/10.41.pdf"));
@@ -220,4 +220,6 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapter.Sele
         startActivity(new Intent(MainActivity2.this, MainActivity3.class).putExtra("data",modelRcycler.getLoadUrl()));
 
     }
+
+
 }
